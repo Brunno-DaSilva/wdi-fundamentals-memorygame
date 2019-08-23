@@ -8,16 +8,43 @@ File Type: JavaScrip
 
 /*
 Step 1:
-Create two variables with a value of Queen 
-and two with the value of King
+	Creating an array for the four cards
 */
 
-var cardOne = 'queen'; 
-var cardTwo = 'queen'; 
-var cardThree = 'king'; 
-var cardFour = 'king'
+//Step 1: array of cards 
+var cards = ['queen', 'queen', 'king', 'king'];
 
-//console log two of the four cards to simulate a user interaction.
+// Step 2: empty array for cards in Play
+var cardsInPlay = [];
 
-console.log("User flipped " + cardTwo);
-console.log("User flipped " + cardFour);
+// Step 3: variable to represent the first card that the user flipps
+var cardOne = cards[0]; 
+
+//Step5: Store the third Item of the array
+var cardTwo = cards[2];
+
+//Step: 4 assign cardOne to empty array cardsInPlay
+cardsInPlay.push(cardOne); 
+
+//Step 6: push cardTwo to the end of the CardsInPlay array
+cardsInPlay.push(cardTwo);
+
+
+if (cardsInPlay.length === 2) {
+
+	alert("You found a match!");
+
+}else if (cardsInPlay[0] === cardsInPlay[1]){
+
+	alert("You found a match!");
+
+}
+
+
+
+
+//***Testing: console log for testing****.
+
+	console.log("User flipped " + cardsInPlay);
+
+//**** Testing: console log for testing ****//
