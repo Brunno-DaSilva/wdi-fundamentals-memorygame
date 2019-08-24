@@ -17,34 +17,38 @@ var cards = ['queen', 'queen', 'king', 'king'];
 // Step 2: empty array for cards in Play
 var cardsInPlay = [];
 
-// Step 3: variable to represent the first card that the user flipps
-var cardOne = cards[0]; 
 
-//Step5: Store the third Item of the array
-var cardTwo = cards[2];
+//Function check for a match
+function checkForMatch(){
+	if(cardsInPlay[0] === cardsInPlay[1]){
+		console.log("You found a match")
+	}else{
+		console.log("Sorry, try again");
+	}
+}
+//Function Project ->  create a function 
 
-//Step: 4 assign cardOne to empty array cardsInPlay
-cardsInPlay.push(cardOne); 
+function flipCard(cardId){
 
-//Step 6: push cardTwo to the end of the CardsInPlay array
-cardsInPlay.push(cardTwo);
+	cardsInPlay.push(cards[cardId]);
+	checkForMatch();
 
 
-if (cardsInPlay.length === 2) {
+	if (cardsInPlay.length === 2) {
 
 	alert("You found a match!");
 
-}else if (cardsInPlay[0] === cardsInPlay[1]){
+	}else if (cardsInPlay[0] === cardsInPlay[1]){
 
 	alert("You found a match!");
 
+	}
+
+	console.log("User flipped " + cards[cardId]);
 }
 
+flipCard(0);
+flipCard(2);
 
 
 
-//***Testing: console log for testing****.
-
-	console.log("User flipped " + cardsInPlay);
-
-//**** Testing: console log for testing ****//
